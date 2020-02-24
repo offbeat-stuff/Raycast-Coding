@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEMPLATE</title>
+    <title>Raycast Coding</title>
+    <link href="style.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="init()">
     
+    <script>
+        function init(){
+            let s =loadScript("index.js",function(){setup()})
+        }
+
+        function loadScript(src,load){
+            let _script = document.createElement("script")
+            _script.src=src
+            _script.onload=load
+            document.body.appendChild(_script)
+            return _script
+        }
+    </script>
 </body>
 </html>
